@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu" id="hamburgerMenu">
+        <i class="fas fa-bars"></i>
+        <div class="level-indicator" id="menuLevel">1</div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Game Dashboard</h3>
+            <span class="close-btn" id="closeSidebar">×</span>
+        </div>
+        <div class="sidebar-content">
+            <div class="stats">
+                <h4>Game Stats</h4>
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-label">SCORE</div>
+                        <div class="stat-value" id="score">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">LEVEL</div>
+                        <div class="stat-value" id="level">1</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">SPEED</div>
+                        <div class="stat-value" id="speed">1x</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">LENGTH</div>
+                        <div class="stat-value" id="length">3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <h4>Controls</h4>
+                <div class="key-row">
+                    <div class="key"><i class="fas fa-arrow-up"></i></div>
+                    <div class="key"><i class="fas fa-arrow-left"></i></div>
+                    <div class="key"><i class="fas fa-arrow-down"></i></div>
+                    <div class="key"><i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+            <div class="powerups">
+                <h4>Power-ups</h4>
+                <div class="powerup-grid">
+                    <div class="powerup">
+                        <i class="fas fa-bolt"></i>
+                        <div class="powerup-label">Speed Boost</div>
+                    </div>
+                    <div class="powerup">
+                        <i class="fas fa-star"></i>
+                        <div class="powerup-label">Double Points</div>
+                    </div>
+                    <div class="powerup">
+                        <i class="fas fa-compress-alt"></i>
+                        <div class="powerup-label">Shrink Snake</div>
+                    </div>
+                    <div class="powerup">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="powerup-label">Obstacle Shield</div>
+                    </div>
+                </div>
+            </div>
+            <div class="instructions">
+                <h4>How to Play</h4>
+                <ul>
+                    <li>Use arrow keys or on-screen buttons</li>
+                    <li>Eat food to grow longer</li>
+                    <li>Avoid walls and your own tail</li>
+                    <li>Collect power-ups for special abilities</li>
+                </ul>
+            </div>
+            <div class="level-system">
+                <h4>Level System</h4>
+                <p>Advance to higher levels by collecting food:</p>
+                <ul>
+                    <li>Level 1-2: Basic gameplay</li>
+                    <li>Level 3+: Obstacles appear</li>
+                    <li>Level 5+: Speed increases</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="main-container">
+        <!-- Game Container -->
+        <div class="container">
+            <header>
+                <h1><i class="fas fa-snake"></i> Playing Snake Game</h1>
+            </header>
+            <div class="game-area">
+                <div class="game-board-container">
+                    <div class="game-board">
+                        <canvas id="gameCanvas" width="400" height="400"></canvas>
+                        <div class="game-over" id="gameOver">
+                            <h2>Game Over!</h2>
+                            <div class="final-score">Score: <span id="finalScore">0</span></div>
+                            <button class="btn" id="restartBtn"><i class="fas fa-redo"></i> Play Again</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls-sidebar">
+
+                    <div class="buttons">
+                        <button class="btn" id="startBtn"><i class="fas fa-play"></i> Start</button>
+                        <button class="btn pause" id="pauseBtn"><i class="fas fa-pause"></i> Pause</button>
+                        <button class="btn reset" id="resetBtn"><i class="fas fa-redo"></i> Reset</button>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>copyright &copy; all rights reserved 2025 | Leta Kasahun Project</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
