@@ -6,6 +6,7 @@ Snake_game/
 ├── README.md              # Project documentation
 ├── .gitignore             # Files to ignore in Git
 ├── images/                # Screenshots and assets
-│   ├── image1.png         # Game start screen
-│   └── image.png
-└──banner.png        
+    ├──banner.png
+    │── image1.png         # Game start screen
+    └── image.png
+       
