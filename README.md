@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 <p align="center">
   <img src="images/banner_image.png"width="100%" alt="Snake Game Banner" />
 </p>
