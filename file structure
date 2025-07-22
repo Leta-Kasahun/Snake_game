@@ -1,12 +1,1 @@
-Snake_game/
-│
-├── index.html             # Main game page
-├── style.css              # Styles (neon theme, layout)
-├── script.js              # Game logic (JavaScript)
-├── README.md              # Project documentation
-├── .gitignore             # Files to ignore in Git
-├── images/                # Screenshots and assets
-    ├──banner.png
-    │── image1.png         # Game start screen
-    └── image.png
-       
+
